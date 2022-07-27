@@ -24,11 +24,11 @@ function FooterSection() {
                         Aperiam unde minima illum minus?
                     </p>
                     <div className="b-nav-icons">
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin"></i>
-                        <i class="fab fa-github"></i>
-                        <i class="fab fa-youtube"></i>
+                        <i className="fab fa-facebook"></i>
+                        <i className="fab fa-instagram"></i>
+                        <i className="fab fa-linkedin"></i>
+                        <i className="fab fa-github"></i>
+                        <i className="fab fa-youtube"></i>
                     </div>
                 </ul>
                 <ul className="nav-b nav-contact">
@@ -51,7 +51,7 @@ function FooterSection() {
                             <span> +44 (0) 745-878-908</span>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         <div className="icon">
                             <i className="fas fa-map-marker-alt"></i>
                         </div>

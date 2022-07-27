@@ -14,7 +14,7 @@ function BlogCard({name, title, subtext, image, date}) {
                         <span>{name}</span>
                     </div>
                     <div className="right-b-con">
-                        <i class="fas fa-clock"></i>
+                        <i className="fas fa-clock"></i>
                         <span>{date}</span>
                     </div>
                 </div>
@@ -27,11 +27,11 @@ function BlogCard({name, title, subtext, image, date}) {
                 <div className="blog-icons">
                     <p>
                         Share:
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin"></i>
-                        <i class="fab fa-github"></i>
-                        <i class="fab fa-youtube"></i>
+                        <i className="fab fa-facebook"></i>
+                        <i className="fab fa-instagram"></i>
+                        <i className="fab fa-linkedin"></i>
+                        <i className="fab fa-github"></i>
+                        <i className="fab fa-youtube"></i>
                     </p>
                 </div>
             </div>

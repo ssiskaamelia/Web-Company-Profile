@@ -4,52 +4,52 @@ import { useTheme } from "../context/themeContext";
 // import Button from "./Button";
 import { Button, MenuItem, Divider } from "@mui/material";
 import Menu, { MenuProps } from "@mui/material/Menu";
-import { styled, alpha } from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 
 import agency3 from "../img/agency3.jpg";
 import agency4 from "../img/agency4.jpg";
 /*eslint-disable */
 
-const StyledMenu = styled((props) => (
-  <Menu
-    elevation={0}
-    anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'right',
-    }}
-    transformOrigin={{
-      vertical: 'top',
-      horizontal: 'right',
-    }}
-    {...props}
-  />
-))(({ theme }) => ({
-  '& .MuiPaper-root': {
-    borderRadius: 6,
-    // marginTop: theme.spacing(1),
-    minWidth: 180,
-    color:
-      theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
-    boxShadow:
-      'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-    '& .MuiMenu-list': {
-      padding: '4px 0',
-    },
-    '& .MuiMenuItem-root': {
-      '& .MuiSvgIcon-root': {
-        fontSize: 18,
-        color: theme.palette.text.secondary,
-        marginRight: theme.spacing(1.5),
-      },
-      '&:active': {
-        backgroundColor: alpha(
-          theme.palette.primary.main,
-          theme.palette.action.selectedOpacity,
-        ),
-      },
-    },
-  },
-}));
+// const StyledMenu = styled((props) => (
+//   <Menu
+//     elevation={0}
+//     anchorOrigin={{
+//       vertical: 'bottom',
+//       horizontal: 'right',
+//     }}
+//     transformOrigin={{
+//       vertical: 'top',
+//       horizontal: 'right',
+//     }}
+//     {...props}
+//   />
+// ))(({ theme }) => ({
+//   '& .MuiPaper-root': {
+//     borderRadius: 6,
+//     // marginTop: theme.spacing(1),
+//     minWidth: 180,
+//     color:
+//       theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
+//     boxShadow:
+//       'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+//     '& .MuiMenu-list': {
+//       padding: '4px 0',
+//     },
+//     '& .MuiMenuItem-root': {
+//       '& .MuiSvgIcon-root': {
+//         fontSize: 18,
+//         color: theme.palette.text.secondary,
+//         marginRight: theme.spacing(1.5),
+//       },
+//       '&:active': {
+//         backgroundColor: alpha(
+//           theme.palette.primary.main,
+//           theme.palette.action.selectedOpacity,
+//         ),
+//       },
+//     },
+//   },
+// }));
 
 
 function Header() {
@@ -65,13 +65,13 @@ function Header() {
   };
 
   const handleRedirect = (path) => {
-    let services = document.getElementById(path);
-    e.preventDefault(); // Stop Page Reloading
-    services &&
-      services.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    window.location.href= path;
+    // e.preventDefault(); // Stop Page Reloading
+    // services &&
+    //   services.scrollIntoView({
+    //     behavior: "smooth",
+    //     block: "start",
+    //   });
   };
   return (
     <HeaderStyled theme={theme}>
@@ -81,22 +81,39 @@ function Header() {
         </div>
         <ul className="nav-items">
           <li className="nav-item">
-            {/* <a href="#" className="active-menu">
+          <a className="active-menu" onClick={() => handleRedirect("home")}>
               Home
-            </a> */}
-            <Button
+            </a>
+            {/* <Button
               id="demo-customized-button"
-              aria-controls={open ? "demo-customized-menu" : undefined}
+              // aria-controls={open ? "demo-customized-menu" : undefined}
               aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
+              // aria-expanded={open ? "true" : undefined}
               variant="contained"
               disableElevation
-              onClick={handleClick}
+              // onClick={handleClick}
               className="active-menu"
             >
               Home
-            </Button>
-            <StyledMenu
+            </Button> */}
+
+          </li>
+          <li className="nav-item">
+            <a>
+              <Button
+                id="demo-customized-button"
+                aria-controls={open ? "demo-customized-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                variant="contained"
+                disableElevation
+                onClick={handleClick}
+              // className="active-menu"
+              >
+                About
+              </Button>
+            </a>
+            <Menu
               id="demo-customized-menu"
               MenuListProps={{
                 "aria-labelledby": "demo-customized-button",
@@ -105,53 +122,30 @@ function Header() {
               open={open}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose} disableRipple>
-                {/* <EditIcon /> */}
-                Edit
+              <MenuItem onClick={() => handleRedirect("home")} disableRipple>
+                About Us
               </MenuItem>
-              <MenuItem onClick={handleClose} disableRipple>
-                {/* <FileCopyIcon /> */}
-                Duplicate
+              <MenuItem onClick={() => handleRedirect("home")} disableRipple>
+                Tagline
               </MenuItem>
               <Divider sx={{ my: 0.5 }} />
-              <MenuItem onClick={handleClose} disableRipple>
-                {/* <ArchiveIcon /> */}
-                Archive
+              <MenuItem onClick={() => handleRedirect("home")} disableRipple>
+                Teams
               </MenuItem>
-              <MenuItem onClick={handleClose} disableRipple>
-                {/* <MoreHorizIcon /> */}
-                More
-              </MenuItem>
-            </StyledMenu>
+              {/* <MenuItem onClick={handleClose} disableRipple>
+                Location
+              </MenuItem> */}
+            </Menu>
           </li>
           <li className="nav-item">
-            {/* <a href="#">About</a> */}
-            {/* <a
-              href="#aboutsection"
-              onClick={(e) => {
-                let aboutsection = document.getElementById("aboutsection");
-                e.preventDefault(); // Stop Page Reloading
-                aboutsection &&
-                  aboutsection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-              }}
-            >
-              About
-            </a> */}
-          </li>
-          {/* <li className="nav-item">
-            <a href="#">Gallery</a>
-          </li> */}
-          <li className="nav-item">
-            {/* <a href="#">Services</a> */}
-            <a href="#services" onClick={(e) => handleRedirect("services")}>
+            <a onClick={() => handleRedirect("business")}>
               Businnes
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">Programs</a>
+          <a onClick={() => handleRedirect("services")}>
+              Services
+            </a>
           </li>
           <li className="nav-item">
             <a href="#">Contact</a>
@@ -166,36 +160,11 @@ function Header() {
           />
         </div>
       </nav>
-      <div className="header-content u-pad-lg">
-        <div className="left-h-content">
-          <h1>
-            We Are <span>Yayasan Karya Bakti</span> UT
-          </h1>
-          <p>
-            "Sinergi YKBUT dan KANITRA Group untuk mengukir Prestasi dan Tumbuh
-            Menjadi Mitra StraTEgis Bersama AHEMCE"
-          </p>
-          <Button
-            name={"Get Started"}
-            icon={"fas fa-chevron-right"}
-            arrow={"arrow"}
-            blob={"blob"}
-          />
-        </div>
-        <div className="right-h-content">
-          <img className="h-img-3" src={agency4} alt="" />
-          <img className="h-img-2" src={agency3} alt="" />
-        </div>
-      </div>
-      <div className="mouse">
-        <span></span>
-      </div>
     </HeaderStyled>
   );
 }
 
 const HeaderStyled = styled.header`
-  min-height: 100vh;
   position: relative;
   .navigation {
     display: grid;
@@ -239,6 +208,10 @@ const HeaderStyled = styled.header`
           font-size: 1rem;
           padding: 0.8rem;
           position: relative;
+          .MuiButton-root {
+            color: unset!important;
+            background-color: transparent!important;
+          }
           &::before {
             content: "";
             position: absolute;
