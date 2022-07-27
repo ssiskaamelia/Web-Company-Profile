@@ -8,6 +8,8 @@ import ReccomendationsSection from "./Components/ReccomendationsSection";
 import ServicesSection from "./Components/ServicesSection";
 import themes from "./context/theme";
 import { useTheme, useUpdateTheme } from "./context/themeContext";
+import {Switch, Route, Redirect} from "react-router-dom";
+
 
 function App() {
 
@@ -16,21 +18,20 @@ function App() {
   return (
     <AppStyled theme={theme} >
       <Header />
-      <main>
-        <AboutSection />
+      <div>
+        <Switch>
+          <Route path="/home" component={AboutSection} /> 
+          <Route path="/business" component={BlogsSection} />
+          <Route path="/service" component={ServicesSection} />
+          <Route path="/latest" component={LatestSection} />
+        </Switch>
+        {/* <AboutSection />
         <ServicesSection />
         <ReccomendationsSection />
         <LatestSection />
-        <BlogsSection />
-      </main>
-      <FooterSection />
-      <div className="lines">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
+        <BlogsSection /> */}
       </div>
-
+      <FooterSection />
       <div className="theme-switcher">
         {
           themes.map((theme, i) => {
