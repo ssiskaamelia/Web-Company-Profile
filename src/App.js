@@ -24,6 +24,7 @@ function App() {
           <Route path="/business" component={BlogsSection} />
           <Route path="/service" component={ServicesSection} />
           <Route path="/latest" component={LatestSection} />
+          <Route path="/reccomendation" component={ReccomendationsSection} />
         </Switch>
         {/* <AboutSection />
         <ServicesSection />

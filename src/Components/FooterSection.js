@@ -81,9 +81,9 @@ function FooterSection() {
                     {/* <li className="nav-item">
                         <a href="#">Private Policy</a>
                     </li> */}
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <a href="#">License & Copyright</a>
-                    </li>
+                    </li> */}
                 </ul>
 
                 <ul className="nav-b ig">

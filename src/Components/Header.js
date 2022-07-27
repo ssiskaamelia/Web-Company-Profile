@@ -4,7 +4,7 @@ import { useTheme } from "../context/themeContext";
 // import Button from "./Button";
 import { Button, MenuItem, Divider } from "@mui/material";
 import Menu, { MenuProps } from "@mui/material/Menu";
-import { alpha } from '@mui/material/styles';
+import { alpha } from "@mui/material/styles";
 
 import agency3 from "../img/agency3.jpg";
 import agency4 from "../img/agency4.jpg";
@@ -51,7 +51,6 @@ import agency4 from "../img/agency4.jpg";
 //   },
 // }));
 
-
 function Header() {
   const theme = useTheme();
 
@@ -65,7 +64,7 @@ function Header() {
   };
 
   const handleRedirect = (path) => {
-    window.location.href= path;
+    window.location.href = path;
     // e.preventDefault(); // Stop Page Reloading
     // services &&
     //   services.scrollIntoView({
@@ -81,9 +80,11 @@ function Header() {
         </div>
         <ul className="nav-items">
           <li className="nav-item">
-          <a className="active-menu" onClick={() => handleRedirect("home")}>
-              Home
-            </a>
+            <Button>
+              <a className="active-menu" onClick={() => handleRedirect("home")}>
+                Home
+              </a>
+            </Button>
             {/* <Button
               id="demo-customized-button"
               // aria-controls={open ? "demo-customized-menu" : undefined}
@@ -96,7 +97,6 @@ function Header() {
             >
               Home
             </Button> */}
-
           </li>
           <li className="nav-item">
             <a>
@@ -108,7 +108,7 @@ function Header() {
                 variant="contained"
                 disableElevation
                 onClick={handleClick}
-              // className="active-menu"
+                // className="active-menu"
               >
                 About
               </Button>
@@ -125,6 +125,7 @@ function Header() {
               <MenuItem onClick={() => handleRedirect("home")} disableRipple>
                 About Us
               </MenuItem>
+              <Divider sx={{ my: 0.5 }} />
               <MenuItem onClick={() => handleRedirect("home")} disableRipple>
                 Tagline
               </MenuItem>
@@ -137,16 +138,16 @@ function Header() {
               </MenuItem> */}
             </Menu>
           </li>
-          <li className="nav-item">
-            <a onClick={() => handleRedirect("business")}>
-              Businnes
-            </a>
-          </li>
-          <li className="nav-item">
-          <a onClick={() => handleRedirect("services")}>
-              Services
-            </a>
-          </li>
+          <Button>
+            <li className="nav-item">
+              <a onClick={() => handleRedirect("business")}>Businnes</a>
+            </li>
+          </Button>
+          <Button>
+            <li className="nav-item">
+              <a onClick={() => handleRedirect("services")}>Services</a>
+            </li>
+          </Button>
           <li className="nav-item">
             <a href="#">Contact</a>
           </li>
@@ -209,8 +210,8 @@ const HeaderStyled = styled.header`
           padding: 0.8rem;
           position: relative;
           .MuiButton-root {
-            color: unset!important;
-            background-color: transparent!important;
+            color: unset !important;
+            background-color: transparent !important;
           }
           &::before {
             content: "";
