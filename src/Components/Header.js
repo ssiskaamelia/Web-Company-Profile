@@ -4,6 +4,7 @@ import { useTheme } from "../context/themeContext";
 // import Button from "./Button";
 import { Button, MenuItem, Divider } from "@mui/material";
 import Menu, { MenuProps } from "@mui/material/Menu";
+import ReccomendationsSection from "./ReccomendationsSection";
 import { alpha } from "@mui/material/styles";
 
 import agency3 from "../img/agency3.jpg";
@@ -126,11 +127,11 @@ function Header() {
                 About Us
               </MenuItem>
               <Divider sx={{ my: 0.5 }} />
-              <MenuItem onClick={() => handleRedirect("home")} disableRipple>
+              <MenuItem onClick={() => handleRedirect("reccomendation")} disableRipple>
                 Tagline
               </MenuItem>
               <Divider sx={{ my: 0.5 }} />
-              <MenuItem onClick={() => handleRedirect("home")} disableRipple>
+              <MenuItem onClick={() => handleRedirect("sectionstaff")} disableRipple>
                 Teams
               </MenuItem>
               {/* <MenuItem onClick={handleClose} disableRipple>
@@ -140,7 +141,7 @@ function Header() {
           </li>
           <Button>
             <li className="nav-item">
-              <a onClick={() => handleRedirect("business")}>Businnes</a>
+              <a onClick={() => handleRedirect("business")}>Business</a>
             </li>
           </Button>
           <Button>

@@ -7,6 +7,7 @@ import LatestSection from "./Components/LatestSection";
 import ReccomendationsSection from "./Components/ReccomendationsSection";
 import ServicesSection from "./Components/ServicesSection";
 import themes from "./context/theme";
+import SectionStaff from "./Components/SectionStaff"
 import { useTheme, useUpdateTheme } from "./context/themeContext";
 import {Switch, Route, Redirect} from "react-router-dom";
 
@@ -22,9 +23,10 @@ function App() {
         <Switch>
           <Route path="/home" component={AboutSection} /> 
           <Route path="/business" component={BlogsSection} />
-          <Route path="/service" component={ServicesSection} />
+          <Route path="/services" component={ServicesSection} />
           <Route path="/latest" component={LatestSection} />
           <Route path="/reccomendation" component={ReccomendationsSection} />
+          <Route path="/sectionstaff" component={SectionStaff}/>
         </Switch>
         {/* <AboutSection />
         <ServicesSection />
