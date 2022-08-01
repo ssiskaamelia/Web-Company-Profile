@@ -30,7 +30,7 @@ function BlogCard({name, title, subtext, image, date}) {
                         <i className="fab fa-facebook"></i>
                         <i className="fab fa-instagram"></i>
                         <i className="fab fa-linkedin"></i>
-                        <i className="fab fa-github"></i>
+                        {/* <i className="fab fa-github"></i> */}
                         <i className="fab fa-youtube"></i>
                     </p>
                 </div>

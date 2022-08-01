@@ -25,29 +25,29 @@ function ServicesSection() {
 
             <div className="services-con">
                 <ServiceCard 
-                    title={'3d Animation'}
+                    title={'UT SCHOOL'}
                     desc={'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ducimus modi consequuntur praesentium, veritatis nemo sint.'}
                     icon={animation}
                 />
                 <ServiceCard
-                    title="Artificial Intelligence"
+                    title="YKBUT LEARNING CENTER"
                     desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                             Ducimus modi consequuntur praesentium, veritatis nemo sint."
                     icon={artificialIntelligence}
                 />
                 <ServiceCard
-                    title="Game Development"
+                    title="POLIKLINIK"
                     desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                             Ducimus modi consequuntur praesentium, veritatis nemo sint."
                     icon={gameDevelopment}
                 />
                 <ServiceCard
-                    title="Emergency Software"
+                    title="UT DAY CARE"
                     desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                             Ducimus modi consequuntur praesentium, veritatis nemo sint."
                     icon={emergencySoftware}
                 />
-                <ServiceCard
+                {/* <ServiceCard
                     title="Global Teaching"
                     desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                             Ducimus modi consequuntur praesentium, veritatis nemo sint."
@@ -58,7 +58,7 @@ function ServicesSection() {
                     desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                             Ducimus modi consequuntur praesentium, veritatis nemo sint."
                     icon={videoProduction}
-                />
+                /> */}
             </div>
         </ServicesSectionStyled>
     )

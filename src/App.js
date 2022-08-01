@@ -10,6 +10,7 @@ import themes from "./context/theme";
 import SectionStaff from "./Components/SectionStaff"
 import { useTheme, useUpdateTheme } from "./context/themeContext";
 import {Switch, Route, Redirect} from "react-router-dom";
+import GallerySection from "./Components/Gallery";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/latest" component={LatestSection} />
           <Route path="/reccomendation" component={ReccomendationsSection} />
           <Route path="/sectionstaff" component={SectionStaff}/>
+          <Route path='/gallery' component={GallerySection} />
         </Switch>
         {/* <AboutSection />
         <ServicesSection />

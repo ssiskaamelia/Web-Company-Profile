@@ -123,7 +123,7 @@ function Header() {
               open={open}
               onClose={handleClose}
             >
-              <MenuItem onClick={() => handleRedirect("home")} disableRipple>
+              <MenuItem onClick={() => handleRedirect("aboutsection")} disableRipple>
                 About Us
               </MenuItem>
               <Divider sx={{ my: 0.5 }} />
@@ -134,9 +134,10 @@ function Header() {
               <MenuItem onClick={() => handleRedirect("sectionstaff")} disableRipple>
                 Teams
               </MenuItem>
-              {/* <MenuItem onClick={handleClose} disableRipple>
-                Location
-              </MenuItem> */}
+              <Divider sx={{ my: 0.5 }} />
+              <MenuItem onClick={() => handleRedirect("gallery")} disableRipple>
+                Gallery
+              </MenuItem>
             </Menu>
           </li>
           <Button>
